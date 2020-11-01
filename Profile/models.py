@@ -18,3 +18,22 @@ class ProfileTwo(models.Model):
 
     def __str__ (self):
         return self.profileModel
+
+##-----------------------------------------------Tabla de usuarios que se vizualizara en Front-----------------------------------------------------
+
+class Users(models.Model):
+    fullname = models.CharField(max_length = 255)
+    address = models.CharField(max_length = 255)
+    age = models.IntegerField()
+
+
+
+#---------------------------------------------------------Metodos Get, Put y Delete-------------------------------------------------------------------
+
+#Create/Insert/Add - Post
+
+#Retrieve/ Fetch - Get
+
+#Update/Edit - Put
+
+#Delete/ Remove - Delete
