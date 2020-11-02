@@ -26,6 +26,8 @@ class Users(models.Model):
     address = models.CharField(max_length = 255)
     age = models.IntegerField()
 
+    def __str__(self):
+        return self.fullname
 
 
 #---------------------------------------------------------Metodos Get, Put y Delete-------------------------------------------------------------------
