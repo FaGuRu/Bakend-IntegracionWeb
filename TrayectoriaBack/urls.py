@@ -19,7 +19,6 @@ from django.conf.urls import include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 from rest_framework import permissions
-from Profile.views import UsersViewset
 # from rest_framework_swagger.views import get_swagger_view
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
@@ -39,7 +38,7 @@ class UserViewSet(viewsets.ModelViewSet):
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
-router.register('profile',UsersViewset)
+##router.register('profile',UsersViewset)
 ##router.register('profile',ProfileModelView)
 
 # schema_view = get_schema_view(
