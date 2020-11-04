@@ -48,12 +48,13 @@ class UsersViewset(APIView):
             return Response("Error Formato")
 
         def delete(self,request,pk,format=None):
-            task = UserSerializer.objects.get(id=pk)
+            task = Users.objects.get(pk=pk)
             task.delete()
+            return Response("Eliminado")
 
         def put(self,request,pk):
-            task = UserSerializer.objects.get(id=pk)
-            serializer = UserSerializer(instance=task, data=request.data)
+            task = Users.objects.get(pk=pk)
+            serializer = UserSerializer(task,data=request.data)
             if serializer.is_valid():
                 serializer.save()
 
