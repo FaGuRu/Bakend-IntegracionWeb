@@ -33,6 +33,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #registro,
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+
     # 'drf_yasg',
     'corsheaders',
     'rest_framework',
