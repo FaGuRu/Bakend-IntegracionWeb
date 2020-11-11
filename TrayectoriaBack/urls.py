@@ -38,8 +38,6 @@ class UserViewSet(viewsets.ModelViewSet):
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
-##router.register('profile',UsersViewset)
-##router.register('profile',ProfileModelView)
 
 # schema_view = get_schema_view(
 #    openapi.Info(
@@ -62,4 +60,6 @@ urlpatterns = [
     re_path(r'^', include(router.urls)),
     re_path(r'^api/v1/login/', include('Login.urls')),
     re_path(r'^api/v1/profile/', include('Profile.urls')),
+    re_path(r'^rest-auth/', include('rest_auth.urls')),
+    re_path(r'^rest-auth/registration/', include('rest_auth.registration.urls'))
 ]

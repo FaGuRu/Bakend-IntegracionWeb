@@ -11,6 +11,9 @@ from . import models
 from . import serializers
 from rest_framework import permissions
 
+#-----Importaciones para el registro de usuarios-----#
+
+
 # --------------MODELOS-------------------
 from Profile.models import ProfileModel
 from Profile.models import Users
@@ -58,4 +61,13 @@ class UsersViewset(APIView):
             if serializer.is_valid():
                 serializer.save()
 
-            return Response(serializer.data)
+            return Response("Exito")
+
+#-------------------Registrar usuario-------------------#
+# class RegisterU(APIView):
+#     def post(self, request, format=None):
+#             serializer = UserSerializer(data = request.data, context = {'request': request}) # Va a invocar a una clase de serializador
+#             if(serializer.is_valid()):
+#                 serializer.save()
+#                 return Response(serializer.data)
+#             return Response("Error Formato")
