@@ -20,7 +20,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['ids-bakend.herokuapp.com','54.221.23.97']
+ALLOWED_HOSTS = ['ids-bakend.herokuapp.com','54.221.23.97','fabricioweb.ddns.net']
 
 
 # Application definition
